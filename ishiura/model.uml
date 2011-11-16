@@ -6,6 +6,18 @@
   <ownedComment xmi:id="_dkX0kA9yEeG8lfUD1VWSWA">
     <body> コメントを参照する</body>
   </ownedComment>
+  <ownedComment xmi:id="_X4acQA__EeGqJZeXpK1Y7w">
+    <body>ログインしていない場合のみ</body>
+  </ownedComment>
+  <ownedComment xmi:id="_iuw68BAkEeGqJZeXpK1Y7w">
+    <body>　　　ログインする&#xD;
+QuackerにOpenIDを&#xD;
+伝えて&#xD;
+ログインユーザになる</body>
+  </ownedComment>
+  <ownedComment xmi:id="_sl-3sBAkEeGqJZeXpK1Y7w">
+    <body>　　　検索する</body>
+  </ownedComment>
   <packagedElement xmi:type="uml:Actor" xmi:id="_5GrO8AuAEeGfQayht2oQWg" name="ユーザ（使用者）"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_AS0skAuBEeGfQayht2oQWg" name="ログインする">
     <include xmi:id="_PeYQwAuBEeGfQayht2oQWg" addition="_70ankAuAEeGfQayht2oQWg"/>
@@ -208,35 +220,109 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6UjNdg9IEeG8lfUD1VWSWA" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Component" xmi:id="_jHFL0A9JEeG8lfUD1VWSWA" name="作るシステム" useCase="_n0Qa4A9wEeG8lfUD1VWSWA _sb5UYA9wEeG8lfUD1VWSWA">
-    <ownedUseCase xmi:id="_kq2I0A9CEeG8lfUD1VWSWA" name="参照先を登録する">
+  <packagedElement xmi:type="uml:Component" xmi:id="_jHFL0A9JEeG8lfUD1VWSWA" name="Quacker" useCase="_n0Qa4A9wEeG8lfUD1VWSWA _sb5UYA9wEeG8lfUD1VWSWA _Z7wqgA_zEeGqJZeXpK1Y7w _OXmG8A_3EeGqJZeXpK1Y7w _YKMCYA_3EeGqJZeXpK1Y7w _bnLGoA_3EeGqJZeXpK1Y7w _uE170A_3EeGqJZeXpK1Y7w _yD81sA_3EeGqJZeXpK1Y7w _JTFOwA_4EeGqJZeXpK1Y7w _dBD1QA_4EeGqJZeXpK1Y7w _7cb18BAhEeGqJZeXpK1Y7w">
+    <ownedComment xmi:id="_XPcgIA_xEeGqJZeXpK1Y7w">
+      <body> 要確認&#xD;
+最大表示数の設定は&#xD;
+ログインの前後で&#xD;
+制限されるか？</body>
+    </ownedComment>
+    <ownedComment xmi:id="_38500A_xEeGqJZeXpK1Y7w">
+      <body>ログイン前のユーザは、&#xD;
+参照先として登録した&#xD;
+ユーザ、グループを&#xD;
+どうやって知ることができる？</body>
+    </ownedComment>
+    <ownedComment xmi:id="_V6yrQA_6EeGqJZeXpK1Y7w">
+      <body>グループに自分のみ存在するときは、グループも削除する&#xD;
+</body>
+    </ownedComment>
+    <ownedComment xmi:id="_Ik7EQBAkEeGqJZeXpK1Y7w">
+      <body> 　　　参照先&#xD;
+</body>
+    </ownedComment>
+    <ownedComment xmi:id="_czFmsBAkEeGqJZeXpK1Y7w">
+      <body>　　　グループ&#xD;
+</body>
+    </ownedComment>
+    <ownedComment xmi:id="_ewtJ8BAkEeGqJZeXpK1Y7w">
+      <body>　　　コメント&#xD;
+</body>
+    </ownedComment>
+    <ownedComment xmi:id="_kbGg8BAkEeGqJZeXpK1Y7w">
+      <body>　　　コメントを参照する</body>
+    </ownedComment>
+    <ownedComment xmi:id="_vf8ucBAkEeGqJZeXpK1Y7w">
+      <body>　　　フォローする</body>
+    </ownedComment>
+    <ownedComment xmi:id="_xSY8cBAkEeGqJZeXpK1Y7w">
+      <body>　　　フォローをやめる</body>
+    </ownedComment>
+    <ownedComment xmi:id="_3Oz3kBAkEeGqJZeXpK1Y7w">
+      <body>　　　コメントを記述する</body>
+    </ownedComment>
+    <ownedComment xmi:id="_8HlkYBAkEeGqJZeXpK1Y7w">
+      <body>　　　グループを登録する</body>
+    </ownedComment>
+    <ownedComment xmi:id="_AAl2QBAlEeGqJZeXpK1Y7w">
+      <body>　　　グループに参加する</body>
+    </ownedComment>
+    <ownedComment xmi:id="_Cd8pgBAlEeGqJZeXpK1Y7w">
+      <body>　　　グループを削除する</body>
+    </ownedComment>
+    <ownedComment xmi:id="_EjA4kBAlEeGqJZeXpK1Y7w">
+      <body>　　　グループから外れる</body>
+    </ownedComment>
+    <ownedComment xmi:id="_HA9hsBAlEeGqJZeXpK1Y7w">
+      <body>　　　ログアウトする&#xD;
+Quackerから抜けて&#xD;
+ログインしていないユーザになる</body>
+    </ownedComment>
+    <ownedUseCase xmi:id="_kq2I0A9CEeG8lfUD1VWSWA" name="参照先をフォローする">
       <include xmi:id="_hqfKoA9MEeG8lfUD1VWSWA" addition="__uA6kA9KEeG8lfUD1VWSWA"/>
       <include xmi:id="_ikc4gA9MEeG8lfUD1VWSWA" addition="_B0bNcA9LEeG8lfUD1VWSWA"/>
       <include xmi:id="_RWn6wA9xEeG8lfUD1VWSWA" addition="_tPwaQA9wEeG8lfUD1VWSWA"/>
     </ownedUseCase>
-    <ownedUseCase xmi:id="_poT2cA9EEeG8lfUD1VWSWA" name="参照先の登録をやめる">
+    <ownedUseCase xmi:id="_poT2cA9EEeG8lfUD1VWSWA" name="参照先のフォローをやめる">
       <include xmi:id="_dB2LUQ_rEeGwDdwk9YupBw" addition="_tPwaQA9wEeG8lfUD1VWSWA"/>
     </ownedUseCase>
-    <ownedUseCase xmi:id="_iJO1wA9EEeG8lfUD1VWSWA" name="参照先のコメントを参照する">
+    <ownedUseCase xmi:id="_iJO1wA9EEeG8lfUD1VWSWA" name="フォローした参照先のコメントを参照する">
       <include xmi:id="_D3GakA9xEeG8lfUD1VWSWA" addition="_sH5eUA9EEeG8lfUD1VWSWA"/>
     </ownedUseCase>
     <ownedUseCase xmi:id="_V-rvAA9FEeG8lfUD1VWSWA" name="コメントを記述する">
       <include xmi:id="_EytHMA9xEeG8lfUD1VWSWA" addition="_4VdnYA9EEeG8lfUD1VWSWA"/>
     </ownedUseCase>
-    <ownedUseCase xmi:id="_4VdnYA9EEeG8lfUD1VWSWA" name="ログインする"/>
-    <ownedUseCase xmi:id="_6PzNIA9EEeG8lfUD1VWSWA" name="自分の記述したコメントを参照する"/>
+    <ownedUseCase xmi:id="_4VdnYA9EEeG8lfUD1VWSWA" name="ログアウトする"/>
+    <ownedUseCase xmi:id="_6PzNIA9EEeG8lfUD1VWSWA" name="記述したコメントを参照する"/>
     <ownedUseCase xmi:id="__uA6kA9KEeG8lfUD1VWSWA" name="ユーザを選択する"/>
     <ownedUseCase xmi:id="_B0bNcA9LEeG8lfUD1VWSWA" name="グループを選択する"/>
     <ownedUseCase xmi:id="_n0Qa4A9wEeG8lfUD1VWSWA" name="参照先を選択する" subject="_jHFL0A9JEeG8lfUD1VWSWA"/>
     <ownedUseCase xmi:id="_sb5UYA9wEeG8lfUD1VWSWA" name="UseCase" subject="_jHFL0A9JEeG8lfUD1VWSWA"/>
-    <ownedUseCase xmi:id="_tPwaQA9wEeG8lfUD1VWSWA" name="参照先を選択する"/>
+    <ownedUseCase xmi:id="_tPwaQA9wEeG8lfUD1VWSWA" name="参照先を検索する"/>
     <ownedUseCase xmi:id="_sH5eUA9EEeG8lfUD1VWSWA" name="最大表示数を設定する"/>
-    <ownedUseCase xmi:id="_R8P6sA9NEeG8lfUD1VWSWA" name="ユーザを選択する">
+    <ownedUseCase xmi:id="_R8P6sA9NEeG8lfUD1VWSWA" name="会員ユーザを検索する">
       <generalization xmi:id="_ZkCoIA9xEeG8lfUD1VWSWA" general="_tPwaQA9wEeG8lfUD1VWSWA"/>
     </ownedUseCase>
-    <ownedUseCase xmi:id="_Us0k4A9NEeG8lfUD1VWSWA" name="グループを選択する">
+    <ownedUseCase xmi:id="_Us0k4A9NEeG8lfUD1VWSWA" name="グループを検索する">
       <generalization xmi:id="_bxv10A9xEeG8lfUD1VWSWA" general="_tPwaQA9wEeG8lfUD1VWSWA"/>
     </ownedUseCase>
+    <ownedUseCase xmi:id="_Z7wqgA_zEeGqJZeXpK1Y7w" name="参照先のコメントを参照する" subject="_jHFL0A9JEeG8lfUD1VWSWA">
+      <include xmi:id="_7dzuwA_8EeGqJZeXpK1Y7w" addition="_tPwaQA9wEeG8lfUD1VWSWA"/>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_OXmG8A_3EeGqJZeXpK1Y7w" name="グループを登録する" subject="_jHFL0A9JEeG8lfUD1VWSWA">
+      <include xmi:id="_-uv34A_4EeGqJZeXpK1Y7w" addition="_uE170A_3EeGqJZeXpK1Y7w"/>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_YKMCYA_3EeGqJZeXpK1Y7w" name="グループを削除する" subject="_jHFL0A9JEeG8lfUD1VWSWA"/>
+    <ownedUseCase xmi:id="_bnLGoA_3EeGqJZeXpK1Y7w" name="UseCase1" subject="_jHFL0A9JEeG8lfUD1VWSWA"/>
+    <ownedUseCase xmi:id="_uE170A_3EeGqJZeXpK1Y7w" name="グループに参加する" subject="_jHFL0A9JEeG8lfUD1VWSWA">
+      <include xmi:id="_eW300A_8EeGqJZeXpK1Y7w" addition="_Us0k4A9NEeG8lfUD1VWSWA"/>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_yD81sA_3EeGqJZeXpK1Y7w" name="グループから外れる" subject="_jHFL0A9JEeG8lfUD1VWSWA">
+      <include xmi:id="_cX__QA_6EeGqJZeXpK1Y7w" addition="_YKMCYA_3EeGqJZeXpK1Y7w"/>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_JTFOwA_4EeGqJZeXpK1Y7w" name="グループを検索する" subject="_jHFL0A9JEeG8lfUD1VWSWA"/>
+    <ownedUseCase xmi:id="_dBD1QA_4EeGqJZeXpK1Y7w" name="ユーザを検索する" subject="_jHFL0A9JEeG8lfUD1VWSWA"/>
+    <ownedUseCase xmi:id="_7cb18BAhEeGqJZeXpK1Y7w" name="ログインする" subject="_jHFL0A9JEeG8lfUD1VWSWA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_dXYMIA9LEeG8lfUD1VWSWA" name="A_使用者（open-idあり）_コメントを記述する" memberEnd="_dXYMIQ9LEeG8lfUD1VWSWA _dXYMJA9LEeG8lfUD1VWSWA">
     <ownedEnd xmi:id="_dXYMIQ9LEeG8lfUD1VWSWA" name="使用者（open-idあり）" type="_hxL0EA9CEeG8lfUD1VWSWA" association="_dXYMIA9LEeG8lfUD1VWSWA">
@@ -248,7 +334,7 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dXYMJg9LEeG8lfUD1VWSWA" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Actor" xmi:id="_nlPuUA9LEeG8lfUD1VWSWA" name="使用者（ユーザ）"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_nlPuUA9LEeG8lfUD1VWSWA" name="使用者"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_qujooA9LEeG8lfUD1VWSWA" name="A_使用者（open-idあり）_ログインする" memberEnd="_qujooQ9LEeG8lfUD1VWSWA _qujopA9LEeG8lfUD1VWSWA">
     <ownedEnd xmi:id="_qujooQ9LEeG8lfUD1VWSWA" name="使用者（open-idあり）" type="_nlPuUA9LEeG8lfUD1VWSWA" association="_qujooA9LEeG8lfUD1VWSWA">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qujoog9LEeG8lfUD1VWSWA" value="1"/>
@@ -260,7 +346,7 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_txBUEA9LEeG8lfUD1VWSWA" name="A_使用者（open-idあり）_参照先を登録する" memberEnd="_txBUEQ9LEeG8lfUD1VWSWA _txBUFA9LEeG8lfUD1VWSWA">
-    <ownedEnd xmi:id="_txBUEQ9LEeG8lfUD1VWSWA" name="使用者（open-idあり）" type="_nlPuUA9LEeG8lfUD1VWSWA" association="_txBUEA9LEeG8lfUD1VWSWA">
+    <ownedEnd xmi:id="_txBUEQ9LEeG8lfUD1VWSWA" name="使用者（open-idあり）" type="_OiliUA9wEeG8lfUD1VWSWA" association="_txBUEA9LEeG8lfUD1VWSWA">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_txBUEg9LEeG8lfUD1VWSWA" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_txBUEw9LEeG8lfUD1VWSWA" value="1"/>
     </ownedEnd>
@@ -270,7 +356,7 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_uvmcMA9LEeG8lfUD1VWSWA" name="A_使用者（open-idあり）_参照先の削除" memberEnd="_uvmcMQ9LEeG8lfUD1VWSWA _uvmcNA9LEeG8lfUD1VWSWA">
-    <ownedEnd xmi:id="_uvmcMQ9LEeG8lfUD1VWSWA" name="使用者（open-idあり）" type="_nlPuUA9LEeG8lfUD1VWSWA" association="_uvmcMA9LEeG8lfUD1VWSWA">
+    <ownedEnd xmi:id="_uvmcMQ9LEeG8lfUD1VWSWA" name="使用者（open-idあり）" type="_OiliUA9wEeG8lfUD1VWSWA" association="_uvmcMA9LEeG8lfUD1VWSWA">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uvmcMg9LEeG8lfUD1VWSWA" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uvmcMw9LEeG8lfUD1VWSWA" value="1"/>
     </ownedEnd>
@@ -284,7 +370,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4lBpMg9LEeG8lfUD1VWSWA" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4lBpMw9LEeG8lfUD1VWSWA" value="1"/>
     </ownedEnd>
-    <ownedEnd xmi:id="_4lBpNA9LEeG8lfUD1VWSWA" name="コメントを参照する" type="_iJO1wA9EEeG8lfUD1VWSWA" association="_4lBpMA9LEeG8lfUD1VWSWA">
+    <ownedEnd xmi:id="_4lBpNA9LEeG8lfUD1VWSWA" name="コメントを参照する" type="_Z7wqgA_zEeGqJZeXpK1Y7w" association="_4lBpMA9LEeG8lfUD1VWSWA">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4lBpNQ9LEeG8lfUD1VWSWA" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4lBpNg9LEeG8lfUD1VWSWA" value="1"/>
     </ownedEnd>
@@ -309,8 +395,120 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9vimRg9LEeG8lfUD1VWSWA" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Actor" xmi:id="_OiliUA9wEeG8lfUD1VWSWA" name="open-idあり">
+  <packagedElement xmi:type="uml:Actor" xmi:id="_OiliUA9wEeG8lfUD1VWSWA" name="ログインユーザ">
     <generalization xmi:id="_ZYriIA9wEeG8lfUD1VWSWA" general="_nlPuUA9LEeG8lfUD1VWSWA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_cdlysA9yEeG8lfUD1VWSWA" name="Subsystem2"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_FwEfMQ_xEeGqJZeXpK1Y7w" name="">
+    <generalization xmi:id="_K3cosA_xEeGqJZeXpK1Y7w" general="_OiliUA9wEeG8lfUD1VWSWA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_HmOvkA_xEeGqJZeXpK1Y7w" name="Actor2">
+    <generalization xmi:id="_L8vc0A_xEeGqJZeXpK1Y7w" general="_OiliUA9wEeG8lfUD1VWSWA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gSQ5kA_zEeGqJZeXpK1Y7w" name="" memberEnd="_gSQ5kQ_zEeGqJZeXpK1Y7w _gSQ5lA_zEeGqJZeXpK1Y7w">
+    <ownedEnd xmi:id="_gSQ5kQ_zEeGqJZeXpK1Y7w" name="open-idあり" type="_OiliUA9wEeG8lfUD1VWSWA" association="_gSQ5kA_zEeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gSQ5kg_zEeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gSQ5kw_zEeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_gSQ5lA_zEeGqJZeXpK1Y7w" name="参照先のコメントを参照する" type="_iJO1wA9EEeG8lfUD1VWSWA" association="_gSQ5kA_zEeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gSQ5lQ_zEeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gSQ5lg_zEeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_5OyBgA_zEeGqJZeXpK1Y7w" name="A_open-idなし_ログインする" memberEnd="_5OyBgQ_zEeGqJZeXpK1Y7w _5OyBhA_zEeGqJZeXpK1Y7w">
+    <ownedEnd xmi:id="_5OyBgQ_zEeGqJZeXpK1Y7w" name="open-idなし" type="_OiliUA9wEeG8lfUD1VWSWA" association="_5OyBgA_zEeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5OyBgg_zEeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5OyBgw_zEeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_5OyBhA_zEeGqJZeXpK1Y7w" name="ログインする" type="_4VdnYA9EEeG8lfUD1VWSWA" association="_5OyBgA_zEeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5OyBhQ_zEeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5OyBhg_zEeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_8ZHSsA_3EeGqJZeXpK1Y7w" name="" memberEnd="_8ZHSsQ_3EeGqJZeXpK1Y7w _8ZHStA_3EeGqJZeXpK1Y7w">
+    <ownedEnd xmi:id="_8ZHSsQ_3EeGqJZeXpK1Y7w" name="グループを登録する" type="_OXmG8A_3EeGqJZeXpK1Y7w" association="_8ZHSsA_3EeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8ZHSsg_3EeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8ZHSsw_3EeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_8ZHStA_3EeGqJZeXpK1Y7w" name="open-idあり" type="_OiliUA9wEeG8lfUD1VWSWA" association="_8ZHSsA_3EeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8ZHStQ_3EeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8ZHStg_3EeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_9uWAQA_3EeGqJZeXpK1Y7w" name="" memberEnd="_9uWAQQ_3EeGqJZeXpK1Y7w _9uWARA_3EeGqJZeXpK1Y7w">
+    <ownedEnd xmi:id="_9uWAQQ_3EeGqJZeXpK1Y7w" name="グループを削除する" type="_YKMCYA_3EeGqJZeXpK1Y7w" association="_9uWAQA_3EeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9uWAQg_3EeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9uWAQw_3EeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_9uWARA_3EeGqJZeXpK1Y7w" name="open-idあり" type="_OiliUA9wEeG8lfUD1VWSWA" association="_9uWAQA_3EeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9uWARQ_3EeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9uWARg_3EeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="__NkXUA_3EeGqJZeXpK1Y7w" name="" memberEnd="__NkXUQ_3EeGqJZeXpK1Y7w __NkXVA_3EeGqJZeXpK1Y7w">
+    <ownedEnd xmi:id="__NkXUQ_3EeGqJZeXpK1Y7w" name="グループに登録する" type="_uE170A_3EeGqJZeXpK1Y7w" association="__NkXUA_3EeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__NkXUg_3EeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__NkXUw_3EeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="__NkXVA_3EeGqJZeXpK1Y7w" name="open-idあり" type="_OiliUA9wEeG8lfUD1VWSWA" association="__NkXUA_3EeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__NkXVQ_3EeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__NkXVg_3EeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_AdSSwA_4EeGqJZeXpK1Y7w" name="" memberEnd="_AdSSwQ_4EeGqJZeXpK1Y7w _AdSSxA_4EeGqJZeXpK1Y7w">
+    <ownedEnd xmi:id="_AdSSwQ_4EeGqJZeXpK1Y7w" name="グループから削除する" type="_yD81sA_3EeGqJZeXpK1Y7w" association="_AdSSwA_4EeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AdSSwg_4EeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AdSSww_4EeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_AdSSxA_4EeGqJZeXpK1Y7w" name="open-idあり" type="_OiliUA9wEeG8lfUD1VWSWA" association="_AdSSwA_4EeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AdSSxQ_4EeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AdSSxg_4EeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_PHT3MA_4EeGqJZeXpK1Y7w" name="" memberEnd="_PHT3MQ_4EeGqJZeXpK1Y7w _PHT3NA_4EeGqJZeXpK1Y7w">
+    <ownedEnd xmi:id="_PHT3MQ_4EeGqJZeXpK1Y7w" name="グループを検索する" type="_Us0k4A9NEeG8lfUD1VWSWA" association="_PHT3MA_4EeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PHT3Mg_4EeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PHT3Mw_4EeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_PHT3NA_4EeGqJZeXpK1Y7w" name="open-idあり" type="_nlPuUA9LEeG8lfUD1VWSWA" association="_PHT3MA_4EeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PHT3NQ_4EeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PHdoMA_4EeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_iVaDwA_4EeGqJZeXpK1Y7w" name="" memberEnd="_iVaDwQ_4EeGqJZeXpK1Y7w _iVaDxA_4EeGqJZeXpK1Y7w">
+    <ownedEnd xmi:id="_iVaDwQ_4EeGqJZeXpK1Y7w" name="ユーザを検索する" type="_tPwaQA9wEeG8lfUD1VWSWA" association="_iVaDwA_4EeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iVaDwg_4EeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iVaDww_4EeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_iVaDxA_4EeGqJZeXpK1Y7w" name="open-idなし" type="_nlPuUA9LEeG8lfUD1VWSWA" association="_iVaDwA_4EeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iVaDxQ_4EeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iVaDxg_4EeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_aIZg4BAKEeGqJZeXpK1Y7w" name="" memberEnd="_aIZg4RAKEeGqJZeXpK1Y7w _aIZg5BAKEeGqJZeXpK1Y7w">
+    <ownedEnd xmi:id="_aIZg4RAKEeGqJZeXpK1Y7w" name="open-idあり" type="_OiliUA9wEeG8lfUD1VWSWA" association="_aIZg4BAKEeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aIZg4hAKEeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aIZg4xAKEeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_aIZg5BAKEeGqJZeXpK1Y7w" name="最大表示数を設定する" type="_sH5eUA9EEeG8lfUD1VWSWA" association="_aIZg4BAKEeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aIZg5RAKEeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aIZg5hAKEeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_vSpboBALEeGqJZeXpK1Y7w" name="ログイン前会員ユーザ">
+    <generalization xmi:id="_1yPVQBALEeGqJZeXpK1Y7w" general="_nlPuUA9LEeG8lfUD1VWSWA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_5iiVEBAhEeGqJZeXpK1Y7w" name="ログインしていないユーザ">
+    <generalization xmi:id="_FwQPIBAiEeGqJZeXpK1Y7w" general="_nlPuUA9LEeG8lfUD1VWSWA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_9Cpl0BAhEeGqJZeXpK1Y7w" name="A_ログインする_ログインしていないユーザ" memberEnd="_9Cpl0RAhEeGqJZeXpK1Y7w _9Cpl1BAhEeGqJZeXpK1Y7w">
+    <ownedEnd xmi:id="_9Cpl0RAhEeGqJZeXpK1Y7w" name="ログインする" type="_7cb18BAhEeGqJZeXpK1Y7w" association="_9Cpl0BAhEeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9Cpl0hAhEeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9Cpl0xAhEeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_9Cpl1BAhEeGqJZeXpK1Y7w" name="ログインしていないユーザ" type="_5iiVEBAhEeGqJZeXpK1Y7w" association="_9Cpl0BAhEeGqJZeXpK1Y7w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9Cpl1RAhEeGqJZeXpK1Y7w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9Cpl1hAhEeGqJZeXpK1Y7w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
 </uml:Model>
