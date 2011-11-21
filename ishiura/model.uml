@@ -76,6 +76,27 @@ followerから見て、&#xD;
   <ownedComment xmi:id="_EjA4kBAlEeGqJZeXpK1Y7w">
     <body>【】　　　グループから外れる</body>
   </ownedComment>
+  <ownedComment xmi:id="_egxqsBQNEeGvYPKijrhvKw">
+    <body> </body>
+  </ownedComment>
+  <ownedComment xmi:id="_Vpb0kBQjEeGvYPKijrhvKw">
+    <body>エンティティ</body>
+  </ownedComment>
+  <ownedComment xmi:id="_acGSUBQjEeGvYPKijrhvKw">
+    <body>DAOサービス</body>
+  </ownedComment>
+  <ownedComment xmi:id="_g7_t8BQjEeGvYPKijrhvKw">
+    <body>利用者</body>
+  </ownedComment>
+  <ownedComment xmi:id="_pSzA0BQjEeGvYPKijrhvKw">
+    <body> アクションクラス</body>
+  </ownedComment>
+  <ownedComment xmi:id="_u4RbkBQjEeGvYPKijrhvKw">
+    <body>ビジネスロジック</body>
+  </ownedComment>
+  <ownedComment xmi:id="_Cj3ccBQkEeGvYPKijrhvKw">
+    <body>保留</body>
+  </ownedComment>
   <packagedElement xmi:type="uml:Actor" xmi:id="_5GrO8AuAEeGfQayht2oQWg" name="ユーザ（使用者）"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_AS0skAuBEeGfQayht2oQWg" name="ログインする">
     <include xmi:id="_PeYQwAuBEeGfQayht2oQWg" addition="_70ankAuAEeGfQayht2oQWg"/>
@@ -608,5 +629,77 @@ followerから見て、&#xD;
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uwZCNRHDEeGIprBAqSVW5w" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uwZCNhHDEeGIprBAqSVW5w" value="1"/>
     </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:AssociationClass" xmi:id="_kHv_cBP7EeGANIQ3x7wBuQ" name="AssociationClass0"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_nmhMYBP7EeGANIQ3x7wBuQ" name="User">
+    <ownedAttribute xmi:id="_O8hdMBQOEeGvYPKijrhvKw" name="Property0"/>
+    <ownedAttribute xmi:id="_6qqREBQOEeGvYPKijrhvKw" name="openId"/>
+    <ownedAttribute xmi:id="_D9XLgBQPEeGvYPKijrhvKw" name="groupName"/>
+    <ownedAttribute xmi:id="_9KMMkBQkEeGvYPKijrhvKw" name="accessTimestamp"/>
+    <ownedOperation xmi:id="_TKFCwBQOEeGvYPKijrhvKw" name="Operation0"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_un8AsBP7EeGANIQ3x7wBuQ" name="Group">
+    <ownedAttribute xmi:id="_wxLtsBQSEeGvYPKijrhvKw" name="id"/>
+    <ownedAttribute xmi:id="_B-FekBQTEeGvYPKijrhvKw" name="groupName"/>
+    <ownedAttribute xmi:id="_EVokwBQTEeGvYPKijrhvKw" name="createTimestamp"/>
+    <ownedAttribute xmi:id="_FZlVEBQTEeGvYPKijrhvKw" name="updateTimestamp"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_zQncABP7EeGANIQ3x7wBuQ" name="Comment">
+    <ownedAttribute xmi:id="_dtO7oBQSEeGvYPKijrhvKw" name="id"/>
+    <ownedAttribute xmi:id="_fUyvUBQSEeGvYPKijrhvKw" name="openId"/>
+    <ownedAttribute xmi:id="_gj604BQSEeGvYPKijrhvKw" name="groupName"/>
+    <ownedAttribute xmi:id="_j0FlIBQSEeGvYPKijrhvKw" name="レコード生成日時"/>
+    <ownedAttribute xmi:id="_m5FAIBQSEeGvYPKijrhvKw" name="レコード更新日時"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PXvCQBP9EeGANIQ3x7wBuQ" name="Followee">
+    <ownedAttribute xmi:id="_Zkz3QBQeEeGvYPKijrhvKw" name="id"/>
+    <ownedAttribute xmi:id="_awNTYBQeEeGvYPKijrhvKw" name="followerOpenId"/>
+    <ownedAttribute xmi:id="_ebDNcBQeEeGvYPKijrhvKw" name="openId"/>
+    <ownedAttribute xmi:id="_jjUu0BQeEeGvYPKijrhvKw" name="groupName"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_YJzU0BP9EeGANIQ3x7wBuQ" name="GroupUser">
+    <ownedAttribute xmi:id="_kUJv0BQTEeGvYPKijrhvKw" name="groupId"/>
+    <ownedAttribute xmi:id="_l9gTQBQTEeGvYPKijrhvKw" name="openId"/>
+    <ownedAttribute xmi:id="_o4qc0BQTEeGvYPKijrhvKw" name="createTimestamp"/>
+    <ownedAttribute xmi:id="_qShLsBQTEeGvYPKijrhvKw" name="updateTimestamp"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_0bZMEBQGEeGANIQ3x7wBuQ" name="表示件数">
+    <ownedAttribute xmi:id="_tDhkoBQcEeGvYPKijrhvKw" name="openId"/>
+    <ownedAttribute xmi:id="_3905kBQdEeGvYPKijrhvKw" name="max"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_xXpm4BQJEeGANIQ3x7wBuQ" name="DataType0"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_zUSAwRQLEeGvYPKijrhvKw" name="Component0"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1LfaABQLEeGvYPKijrhvKw" name="Class0"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_30xJYBQLEeGvYPKijrhvKw" name="Component1"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_8OFWMBQPEeGvYPKijrhvKw" name="Signal0"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_X76vMBQQEeGvYPKijrhvKw" name="CommentDaoService">
+    <ownedOperation xmi:id="_cISB8BQQEeGvYPKijrhvKw" name="inert"/>
+    <ownedOperation xmi:id="_fbuvsBQQEeGvYPKijrhvKw" name="selectByOpenId"/>
+    <ownedOperation xmi:id="_hjVVYBQQEeGvYPKijrhvKw" name="selectByGroupName"/>
+    <ownedOperation xmi:id="_9XbHYBQQEeGvYPKijrhvKw" name="selectByFolowee"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_778A0BQQEeGvYPKijrhvKw" name=""/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_gTfosBQREeGvYPKijrhvKw" name="GroupDaoService">
+    <ownedOperation xmi:id="_kZmicBQREeGvYPKijrhvKw" name="insert"/>
+    <ownedOperation xmi:id="_mKaYwBQREeGvYPKijrhvKw" name="delete"/>
+    <ownedOperation xmi:id="_nxOlkBQREeGvYPKijrhvKw" name="addUser"/>
+    <ownedOperation xmi:id="_r378QBQREeGvYPKijrhvKw" name="deleteUser"/>
+    <ownedOperation xmi:id="_xcX1MBQREeGvYPKijrhvKw" name="selectByGroupName"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_4O4q0BQREeGvYPKijrhvKw" name="UserLogic">
+    <ownedOperation xmi:id="_8z2DwBQREeGvYPKijrhvKw" name="ログインする"/>
+    <ownedOperation xmi:id="_AUs7YBQSEeGvYPKijrhvKw" name="ユーザを検索する"/>
+    <ownedOperation xmi:id="_XXndYBQSEeGvYPKijrhvKw" name="ログアウトする"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BOuowBQUEeGvYPKijrhvKw" name="FolloweeDaoService">
+    <ownedOperation xmi:id="_EGdq4BQUEeGvYPKijrhvKw" name="insert"/>
+    <ownedOperation xmi:id="_GB_jcBQUEeGvYPKijrhvKw" name="delete"/>
+    <ownedOperation xmi:id="_IL09wBQUEeGvYPKijrhvKw" name="selectByFollower"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_Htq6wBQXEeGvYPKijrhvKw" name="Model0"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_zbGHgBQYEeGvYPKijrhvKw" name="PrimitiveType0"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ys3coBQlEeGvYPKijrhvKw" name="GroupUserDaoService">
+    <ownedOperation xmi:id="_4Igl8BQlEeGvYPKijrhvKw" name="insert"/>
+    <ownedOperation xmi:id="_5dJdoBQlEeGvYPKijrhvKw" name="delete"/>
   </packagedElement>
 </uml:Model>
