@@ -98,8 +98,8 @@ followerから見て、&#xD;
     <body>保留</body>
   </ownedComment>
   <ownedComment xmi:id="_0wLOMBcEEeGooYQhI-dt3g">
-    <body>ユーザは複数のグループに&#xD;
-所属できる？</body>
+    <body>ユーザは複数のグループに所属できる？&#xD;
+[0..*]</body>
   </ownedComment>
   <ownedComment xmi:id="_zdiPsBcGEeGooYQhI-dt3g">
     <body>followeeは立場を表す？&#xD;
@@ -202,7 +202,8 @@ followerから見て、&#xD;
   <ownedComment xmi:id="_PCW_YBdDEeGooYQhI-dt3g">
     <body>ユーザとグループの間に入る&#xD;
 グループ管理。&#xD;
-多重度どうなる？</body>
+多重度どうなる？&#xD;
+⇒グループにくっつける？</body>
   </ownedComment>
   <ownedComment xmi:id="_YYyjQBdDEeGooYQhI-dt3g">
     <body>グループとユーザの間に入る&#xD;
@@ -212,6 +213,10 @@ followerから見て、&#xD;
   <ownedComment xmi:id="_gKflABdDEeGooYQhI-dt3g">
     <body>ユーザのfollow。&#xD;
 多重度どうなる？</body>
+  </ownedComment>
+  <ownedComment xmi:id="_wPXgehmbEeGJCffoNHA_Wg">
+    <body>ユーザは複数のグループに所属できる？&#xD;
+[0..*]</body>
   </ownedComment>
   <packagedElement xmi:type="uml:Actor" xmi:id="_5GrO8AuAEeGfQayht2oQWg" name="ユーザ（使用者）"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_AS0skAuBEeGfQayht2oQWg" name="ログインする">
@@ -784,10 +789,15 @@ followerから見て、&#xD;
     <ownedAttribute xmi:id="_GEb5YBcHEeGooYQhI-dt3g" name="コメント"/>
     <ownedAttribute xmi:id="_-Es3UBc1EeGooYQhI-dt3g" name="OpenID"/>
     <ownedAttribute xmi:id="_AjjfYBc2EeGooYQhI-dt3g" name="グループ名"/>
+    <ownedAttribute xmi:id="_lJ3gUBl4EeG6ocwpSJ3SVA" name="コメントを書いた日時"/>
     <ownedOperation xmi:id="_vSCUQBc1EeGooYQhI-dt3g" name="コメントを書く"/>
     <ownedOperation xmi:id="_wyvSABc1EeGooYQhI-dt3g" name="ユーザを指定してコメントを見る"/>
     <ownedOperation xmi:id="_2GMIoBc1EeGooYQhI-dt3g" name="グループを指定してコメントを見る"/>
     <ownedOperation xmi:id="_6UptIBc1EeGooYQhI-dt3g" name="followeeのコメントを見る"/>
+    <ownedOperation xmi:id="_rnDHsBmPEeG6ocwpSJ3SVA" name="コメントを書く"/>
+    <ownedOperation xmi:id="_seCaEBmPEeG6ocwpSJ3SVA" name="ユーザを指定してコメントを見る"/>
+    <ownedOperation xmi:id="_uhxMYBmPEeG6ocwpSJ3SVA" name="グループを指定してコメントを見る"/>
+    <ownedOperation xmi:id="_wuuzMBmPEeG6ocwpSJ3SVA" name="Followeeのコメントを見る"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_PXvCQBP9EeGANIQ3x7wBuQ" name="Followee">
     <ownedAttribute xmi:id="_Zkz3QBQeEeGvYPKijrhvKw" name="id"/>
@@ -812,6 +822,7 @@ followerから見て、&#xD;
     <ownedAttribute xmi:id="_tDhkoBQcEeGvYPKijrhvKw" name="表示数"/>
     <ownedAttribute xmi:id="_3905kBQdEeGvYPKijrhvKw" name="max"/>
     <ownedOperation xmi:id="_0W94oBczEeGooYQhI-dt3g" name="最大表示数を設定する"/>
+    <ownedOperation xmi:id="_-u47QBmPEeG6ocwpSJ3SVA" name="最大表示数を設定する"/>
   </packagedElement>
   <packagedElement xmi:type="uml:DataType" xmi:id="_xXpm4BQJEeGANIQ3x7wBuQ" name="DataType0"/>
   <packagedElement xmi:type="uml:Component" xmi:id="_zUSAwRQLEeGvYPKijrhvKw" name="Component0"/>
@@ -1294,16 +1305,35 @@ followerから見て、&#xD;
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_00LTshcgEeGooYQhI-dt3g" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_dmBqsBcjEeGooYQhI-dt3g" name="ユーザ">
+  <packagedElement xmi:type="uml:Class" xmi:id="_dmBqsBcjEeGooYQhI-dt3g" name="ユーザ" clientDependency="_DHS7YBmPEeG6ocwpSJ3SVA _GE1qkBmPEeG6ocwpSJ3SVA">
     <ownedAttribute xmi:id="_Tkky4BcuEeGooYQhI-dt3g" name="ユーザ" type="_dmBqsBcjEeGooYQhI-dt3g" association="_Tkuj4BcuEeGooYQhI-dt3g">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Tkky4hcuEeGooYQhI-dt3g" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Tkky4RcuEeGooYQhI-dt3g" value="1"/>
     </ownedAttribute>
     <ownedAttribute xmi:id="_LNCG4BczEeGooYQhI-dt3g" name="OpenID"/>
+    <ownedAttribute xmi:id="_aF-38Bl_EeG6ocwpSJ3SVA" name="followee" type="_dmBqsBcjEeGooYQhI-dt3g" association="_aF-38xl_EeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aF-38hl_EeG6ocwpSJ3SVA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aF-38Rl_EeG6ocwpSJ3SVA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_vlAd8BmCEeG6ocwpSJ3SVA" name="グループユーザ" type="_lnA14Bc0EeGooYQhI-dt3g" association="_vlAd8xmCEeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vlAd8RmCEeG6ocwpSJ3SVA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vlAd8hmCEeG6ocwpSJ3SVA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_04AooBmCEeG6ocwpSJ3SVA" name="グループユーザ" type="_lnA14Bc0EeGooYQhI-dt3g" association="_04AooxmCEeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_04AooRmCEeG6ocwpSJ3SVA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_04AoohmCEeG6ocwpSJ3SVA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FVzvcBmREeG6ocwpSJ3SVA" name="コメント" type="_zQncABP7EeGANIQ3x7wBuQ" association="_FVzvcxmREeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FVzvcRmREeG6ocwpSJ3SVA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FVzvchmREeG6ocwpSJ3SVA"/>
+    </ownedAttribute>
     <ownedOperation xmi:id="_Cz4OIBc0EeGooYQhI-dt3g" name="ユーザを検索する"/>
     <ownedOperation xmi:id="_SeHjUBc9EeGooYQhI-dt3g" name="ユーザを認証する"/>
+    <ownedOperation xmi:id="_Bgp4QBmQEeG6ocwpSJ3SVA" name="ユーザを検索する"/>
+    <ownedOperation xmi:id="_CEHxsBmQEeG6ocwpSJ3SVA" name="ログインする"/>
+    <ownedOperation xmi:id="_He3jIBmQEeG6ocwpSJ3SVA" name="ログアウトする"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_e_SjsBcjEeGooYQhI-dt3g" name="グループ">
+  <packagedElement xmi:type="uml:Class" xmi:id="_e_SjsBcjEeGooYQhI-dt3g" name="グループ" clientDependency="_IMSfQBmPEeG6ocwpSJ3SVA">
     <ownedAttribute xmi:id="_GBhO0Bc0EeGooYQhI-dt3g" name="グループ名"/>
     <ownedOperation xmi:id="_IZqK4Bc0EeGooYQhI-dt3g" name="グループを作る"/>
     <ownedOperation xmi:id="_J8AHYBc0EeGooYQhI-dt3g" name="グループを削除する"/>
@@ -1311,6 +1341,14 @@ followerから見て、&#xD;
     <ownedOperation xmi:id="_TTL5MBc0EeGooYQhI-dt3g" name="グループを削除する"/>
     <ownedOperation xmi:id="_UaHFABc0EeGooYQhI-dt3g" name="グループを検索する"/>
     <ownedOperation xmi:id="_SFYFcBc4EeGooYQhI-dt3g" name="グループを検索する"/>
+    <ownedOperation xmi:id="_kp8XMBmFEeG6ocwpSJ3SVA" name="グループを作る"/>
+    <ownedOperation xmi:id="_l_6roBmFEeG6ocwpSJ3SVA" name="グループを削除する"/>
+    <ownedOperation xmi:id="_oEi10BmFEeG6ocwpSJ3SVA" name="グループを検索する"/>
+    <ownedOperation xmi:id="_YzydABmPEeG6ocwpSJ3SVA" name="グループを作る"/>
+    <ownedOperation xmi:id="_aoTuoBmPEeG6ocwpSJ3SVA" name="グループを削除する"/>
+    <ownedOperation xmi:id="_cJw6UBmPEeG6ocwpSJ3SVA" name="グループを検索する"/>
+    <ownedOperation xmi:id="_eE_38BmPEeG6ocwpSJ3SVA" name="グループに加わる"/>
+    <ownedOperation xmi:id="_iBuMMBmPEeG6ocwpSJ3SVA" name="グループから抜ける"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_i_4rUxcjEeGooYQhI-dt3g" name="" memberEnd="_i_4rVBcjEeGooYQhI-dt3g _i_4rUBcjEeGooYQhI-dt3g">
     <ownedEnd xmi:id="_i_4rVBcjEeGooYQhI-dt3g" name="follower" type="_dmBqsBcjEeGooYQhI-dt3g" association="_i_4rUxcjEeGooYQhI-dt3g">
@@ -1334,7 +1372,7 @@ followerから見て、&#xD;
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_Ly3VoxckEeGooYQhI-dt3g" name="" memberEnd="_Ly3VpBckEeGooYQhI-dt3g _Ly3VoBckEeGooYQhI-dt3g">
     <ownedEnd xmi:id="_Ly3VpBckEeGooYQhI-dt3g" name="所属グループ" type="_e_SjsBcjEeGooYQhI-dt3g" association="_Ly3VoxckEeGooYQhI-dt3g">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ly3VpRckEeGooYQhI-dt3g" value="*"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ly3VpRckEeGooYQhI-dt3g" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ly3VphckEeGooYQhI-dt3g"/>
     </ownedEnd>
     <ownedEnd xmi:id="_Ly3VoBckEeGooYQhI-dt3g" name="" type="_dmBqsBcjEeGooYQhI-dt3g" association="_Ly3VoxckEeGooYQhI-dt3g">
@@ -1394,23 +1432,27 @@ followerから見て、&#xD;
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Tkuj4xcuEeGooYQhI-dt3g" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_WmlyYBcuEeGooYQhI-dt3g" name="ユーザのfollow">
+  <packagedElement xmi:type="uml:Class" xmi:id="_WmlyYBcuEeGooYQhI-dt3g" name="followeeユーザ">
     <generalization xmi:id="_Zj5z4Bc1EeGooYQhI-dt3g" general="_4AlgIBcyEeGooYQhI-dt3g"/>
     <ownedAttribute xmi:id="_sn0_gBcvEeGooYQhI-dt3g" name="OpenID"/>
+    <ownedAttribute xmi:id="_ditBABmAEeG6ocwpSJ3SVA" name="followerのOpenID"/>
     <ownedOperation xmi:id="_1JLK8BcuEeGooYQhI-dt3g" name="followeeに登録する"/>
     <ownedOperation xmi:id="_7Wb-cBcuEeGooYQhI-dt3g" name="followeeから削除する"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_OSy6wBcvEeGooYQhI-dt3g" name="グループのfollow">
+  <packagedElement xmi:type="uml:Class" xmi:id="_OSy6wBcvEeGooYQhI-dt3g" name="followeeグループ">
     <generalization xmi:id="_aenIoBc1EeGooYQhI-dt3g" general="_4AlgIBcyEeGooYQhI-dt3g"/>
     <ownedAttribute xmi:id="_rFeb8BcvEeGooYQhI-dt3g" name="グループ名"/>
+    <ownedAttribute xmi:id="_TJqwoBmAEeG6ocwpSJ3SVA" name="followerのOpenID"/>
     <ownedOperation xmi:id="_QBOLcBcvEeGooYQhI-dt3g" name="followeeに登録する"/>
     <ownedOperation xmi:id="_X28KgBcvEeGooYQhI-dt3g" name="followeeから削除"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_4AlgIBcyEeGooYQhI-dt3g" name="follow">
+  <packagedElement xmi:type="uml:Class" xmi:id="_4AlgIBcyEeGooYQhI-dt3g" name="followee">
+    <ownedAttribute xmi:id="_jtu_4BmAEeG6ocwpSJ3SVA" name="followerのOpenID"/>
     <ownedOperation xmi:id="_66jW4BcyEeGooYQhI-dt3g" name="followeeに登録する"/>
     <ownedOperation xmi:id="_9JALcBcyEeGooYQhI-dt3g" name="followeeから削除"/>
+    <ownedOperation xmi:id="_8obmEBmEEeG6ocwpSJ3SVA" name="followerのfolloweeを取得する"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_lnA14Bc0EeGooYQhI-dt3g" name="グループ管理">
+  <packagedElement xmi:type="uml:Class" xmi:id="_lnA14Bc0EeGooYQhI-dt3g" name="グループユーザ">
     <ownedAttribute xmi:id="_2-opABc0EeGooYQhI-dt3g" name="グループ名"/>
     <ownedAttribute xmi:id="_4y3mwBc0EeGooYQhI-dt3g" name="OpenID"/>
     <ownedOperation xmi:id="_8eAbwBc0EeGooYQhI-dt3g" name="グループを作る"/>
@@ -1428,6 +1470,7 @@ followerから見て、&#xD;
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jB5FYRdCEeGooYQhI-dt3g" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jB5FYhdCEeGooYQhI-dt3g" value="1"/>
     </ownedAttribute>
+    <ownedAttribute xmi:id="_cqk_0Rl4EeG6ocwpSJ3SVA" name="isログイン"/>
     <ownedOperation xmi:id="_UjjqABc2EeGooYQhI-dt3g" name="ログインする"/>
     <ownedOperation xmi:id="_VtxaYBc2EeGooYQhI-dt3g" name="ログアウトする"/>
   </packagedElement>
@@ -1454,4 +1497,227 @@ followerから見て、&#xD;
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_4bT6ABdCEeGooYQhI-dt3g" name="&lt;&lt;use？>>" supplier="_dmBqsBcjEeGooYQhI-dt3g" client="_St2FkBc2EeGooYQhI-dt3g"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_kdFA4Bl6EeG6ocwpSJ3SVA" name="" memberEnd="_kdFA4Rl6EeG6ocwpSJ3SVA _kc728Bl6EeG6ocwpSJ3SVA">
+    <ownedEnd xmi:id="_kdFA4Rl6EeG6ocwpSJ3SVA" name="follower" type="_dmBqsBcjEeGooYQhI-dt3g" association="_kdFA4Bl6EeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kdFA4hl6EeG6ocwpSJ3SVA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kdFA4xl6EeG6ocwpSJ3SVA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_kc728Bl6EeG6ocwpSJ3SVA" name="followee" type="_OSy6wBcvEeGooYQhI-dt3g" association="_kdFA4Bl6EeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kc728Rl6EeG6ocwpSJ3SVA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kc728hl6EeG6ocwpSJ3SVA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_zI5VExl6EeG6ocwpSJ3SVA" name="" memberEnd="_zI5VFBl6EeG6ocwpSJ3SVA _zI5VEBl6EeG6ocwpSJ3SVA">
+    <ownedEnd xmi:id="_zI5VFBl6EeG6ocwpSJ3SVA" name="" type="_e_SjsBcjEeGooYQhI-dt3g" association="_zI5VExl6EeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zI5VFRl6EeG6ocwpSJ3SVA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zI5VFhl6EeG6ocwpSJ3SVA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_zI5VEBl6EeG6ocwpSJ3SVA" name="" type="_OSy6wBcvEeGooYQhI-dt3g" association="_zI5VExl6EeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zI5VERl6EeG6ocwpSJ3SVA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zI5VEhl6EeG6ocwpSJ3SVA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:AssociationClass" xmi:id="_aF-38xl_EeG6ocwpSJ3SVA" name="ユーザのfollow" memberEnd="_aF-39Bl_EeG6ocwpSJ3SVA _aF-38Bl_EeG6ocwpSJ3SVA">
+    <ownedAttribute xmi:id="_dmGIsBl_EeG6ocwpSJ3SVA" name="OpenID"/>
+    <ownedEnd xmi:id="_aF-39Bl_EeG6ocwpSJ3SVA" name="follower" type="_dmBqsBcjEeGooYQhI-dt3g" association="_aF-38xl_EeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aF-39Rl_EeG6ocwpSJ3SVA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aF-39hl_EeG6ocwpSJ3SVA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_vAs-Yxl_EeG6ocwpSJ3SVA" name="" memberEnd="_vAs-ZBl_EeG6ocwpSJ3SVA _vAs-YBl_EeG6ocwpSJ3SVA">
+    <ownedEnd xmi:id="_vAs-ZBl_EeG6ocwpSJ3SVA" name="follower" type="_dmBqsBcjEeGooYQhI-dt3g" association="_vAs-Yxl_EeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vAs-ZRl_EeG6ocwpSJ3SVA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vAs-Zhl_EeG6ocwpSJ3SVA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_vAs-YBl_EeG6ocwpSJ3SVA" name="followee" type="_WmlyYBcuEeGooYQhI-dt3g" association="_vAs-Yxl_EeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vAs-YRl_EeG6ocwpSJ3SVA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vAs-Yhl_EeG6ocwpSJ3SVA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_1k85ExmAEeG6ocwpSJ3SVA" name="" memberEnd="_1k85FBmAEeG6ocwpSJ3SVA _1k85EBmAEeG6ocwpSJ3SVA">
+    <ownedEnd xmi:id="_1k85FBmAEeG6ocwpSJ3SVA" name="" type="_dmBqsBcjEeGooYQhI-dt3g" association="_1k85ExmAEeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1k85FRmAEeG6ocwpSJ3SVA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1k85FhmAEeG6ocwpSJ3SVA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_1k85EBmAEeG6ocwpSJ3SVA" name="グループに属す" type="_lnA14Bc0EeGooYQhI-dt3g" association="_1k85ExmAEeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1k85ERmAEeG6ocwpSJ3SVA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1k85EhmAEeG6ocwpSJ3SVA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7rinYxmBEeG6ocwpSJ3SVA" name="" memberEnd="_7rinZBmBEeG6ocwpSJ3SVA _7rinYBmBEeG6ocwpSJ3SVA">
+    <ownedEnd xmi:id="_7rinZBmBEeG6ocwpSJ3SVA" name="グループの一員" type="_lnA14Bc0EeGooYQhI-dt3g" association="_7rinYxmBEeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7rinZRmBEeG6ocwpSJ3SVA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7rinZhmBEeG6ocwpSJ3SVA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_7rinYBmBEeG6ocwpSJ3SVA" name="所属グループ" type="_e_SjsBcjEeGooYQhI-dt3g" association="_7rinYxmBEeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7rinYRmBEeG6ocwpSJ3SVA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7rinYhmBEeG6ocwpSJ3SVA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_vlAd8xmCEeG6ocwpSJ3SVA" name="ユーザ_グループユーザ_0" memberEnd="_vlAd9BmCEeG6ocwpSJ3SVA _vlAd8BmCEeG6ocwpSJ3SVA">
+    <ownedEnd xmi:id="_vlAd9BmCEeG6ocwpSJ3SVA" name="ユーザ" type="_dmBqsBcjEeGooYQhI-dt3g" association="_vlAd8xmCEeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vlAd9RmCEeG6ocwpSJ3SVA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vlAd9hmCEeG6ocwpSJ3SVA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_04AooxmCEeG6ocwpSJ3SVA" name="ユーザ_グループユーザ_1" memberEnd="_04AopBmCEeG6ocwpSJ3SVA _04AooBmCEeG6ocwpSJ3SVA">
+    <ownedEnd xmi:id="_04AopBmCEeG6ocwpSJ3SVA" name="ユーザ" type="_dmBqsBcjEeGooYQhI-dt3g" association="_04AooxmCEeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_04AopRmCEeG6ocwpSJ3SVA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_04AophmCEeG6ocwpSJ3SVA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_pGiIMBmOEeG6ocwpSJ3SVA" name="Followee"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_qhu64BmOEeG6ocwpSJ3SVA" name="Follower">
+    <ownedOperation xmi:id="_j6tuIBmPEeG6ocwpSJ3SVA" name="followする"/>
+    <ownedOperation xmi:id="_pOKkwBmPEeG6ocwpSJ3SVA" name="followをやめる"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_DHS7YBmPEeG6ocwpSJ3SVA" name="" supplier="_qhu64BmOEeG6ocwpSJ3SVA" client="_dmBqsBcjEeGooYQhI-dt3g"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_GE1qkBmPEeG6ocwpSJ3SVA" name="" supplier="_T-XIsRmbEeGJCffoNHA_Wg" client="_dmBqsBcjEeGooYQhI-dt3g"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_IMSfQBmPEeG6ocwpSJ3SVA" name="" supplier="_T-XIsRmbEeGJCffoNHA_Wg" client="_e_SjsBcjEeGooYQhI-dt3g"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_R4oBsBmPEeG6ocwpSJ3SVA" name="" memberEnd="_R4oBsRmPEeG6ocwpSJ3SVA _R4eQsBmPEeG6ocwpSJ3SVA">
+    <ownedEnd xmi:id="_R4oBsRmPEeG6ocwpSJ3SVA" name="" type="_qhu64BmOEeG6ocwpSJ3SVA" association="_R4oBsBmPEeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R4oBshmPEeG6ocwpSJ3SVA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R4oBsxmPEeG6ocwpSJ3SVA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_R4eQsBmPEeG6ocwpSJ3SVA" name="" type="_T-XIsRmbEeGJCffoNHA_Wg" association="_R4oBsBmPEeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R4eQsRmPEeG6ocwpSJ3SVA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R4eQshmPEeG6ocwpSJ3SVA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FVzvcxmREeG6ocwpSJ3SVA" name="ユーザ_コメント_0" memberEnd="_FVzvdBmREeG6ocwpSJ3SVA _FVzvcBmREeG6ocwpSJ3SVA">
+    <ownedEnd xmi:id="_FVzvdBmREeG6ocwpSJ3SVA" name="ユーザ" type="_dmBqsBcjEeGooYQhI-dt3g" association="_FVzvcxmREeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FVzvdRmREeG6ocwpSJ3SVA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FVzvdhmREeG6ocwpSJ3SVA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_J3o74xmREeG6ocwpSJ3SVA" name="" memberEnd="_J3o75BmREeG6ocwpSJ3SVA _J3o74BmREeG6ocwpSJ3SVA">
+    <ownedEnd xmi:id="_J3o75BmREeG6ocwpSJ3SVA" name="" type="_zQncABP7EeGANIQ3x7wBuQ" association="_J3o74xmREeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_J3o75RmREeG6ocwpSJ3SVA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_J3o75hmREeG6ocwpSJ3SVA"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_J3o74BmREeG6ocwpSJ3SVA" name="" type="_dmBqsBcjEeGooYQhI-dt3g" association="_J3o74xmREeG6ocwpSJ3SVA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_J3o74RmREeG6ocwpSJ3SVA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_J3o74hmREeG6ocwpSJ3SVA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_T-XIsRmbEeGJCffoNHA_Wg" name="Followee"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wPXgMBmbEeGJCffoNHA_Wg" name="" memberEnd="_wPXgMRmbEeGJCffoNHA_Wg _wPXgNBmbEeGJCffoNHA_Wg">
+    <ownedEnd xmi:id="_wPXgMRmbEeGJCffoNHA_Wg" name="所属グループ" type="_wPXgTRmbEeGJCffoNHA_Wg" association="_wPXgMBmbEeGJCffoNHA_Wg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wPXgMhmbEeGJCffoNHA_Wg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wPXgMxmbEeGJCffoNHA_Wg"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_wPXgNBmbEeGJCffoNHA_Wg" name="" type="_wPXgNxmbEeGJCffoNHA_Wg" association="_wPXgMBmbEeGJCffoNHA_Wg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wPXgNRmbEeGJCffoNHA_Wg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wPXgNhmbEeGJCffoNHA_Wg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wPXgNxmbEeGJCffoNHA_Wg" name="ユーザ" clientDependency="_wPXgihmbEeGJCffoNHA_Wg _wPXgXRmbEeGJCffoNHA_Wg">
+    <ownedAttribute xmi:id="_wPXgOBmbEeGJCffoNHA_Wg" name="Copy_Of_ユーザ" type="_wPXgNxmbEeGJCffoNHA_Wg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wPXgORmbEeGJCffoNHA_Wg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wPXgOhmbEeGJCffoNHA_Wg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_wPXgOxmbEeGJCffoNHA_Wg" name="Copy_Of_OpenID"/>
+    <ownedAttribute xmi:id="_wPXgPBmbEeGJCffoNHA_Wg" name="Copy_Of_followee" type="_wPXgNxmbEeGJCffoNHA_Wg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wPXgPRmbEeGJCffoNHA_Wg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wPXgPhmbEeGJCffoNHA_Wg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_wPXgPxmbEeGJCffoNHA_Wg" name="Copy_Of_グループユーザ" type="_lnA14Bc0EeGooYQhI-dt3g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wPXgQBmbEeGJCffoNHA_Wg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wPXgQRmbEeGJCffoNHA_Wg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_wPXgQhmbEeGJCffoNHA_Wg" name="Copy_Of_グループユーザ" type="_lnA14Bc0EeGooYQhI-dt3g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wPXgQxmbEeGJCffoNHA_Wg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wPXgRBmbEeGJCffoNHA_Wg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_wPXgRRmbEeGJCffoNHA_Wg" name="Copy_Of_コメント" type="_wPXgZhmbEeGJCffoNHA_Wg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wPXgRhmbEeGJCffoNHA_Wg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wPXgRxmbEeGJCffoNHA_Wg"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_wPXgSBmbEeGJCffoNHA_Wg" name="Copy_Of_ユーザを検索する"/>
+    <ownedOperation xmi:id="_wPXgSRmbEeGJCffoNHA_Wg" name="Copy_Of_ユーザを認証する"/>
+    <ownedOperation xmi:id="_wPXgShmbEeGJCffoNHA_Wg" name="Copy_Of_ユーザを検索する"/>
+    <ownedOperation xmi:id="_wPXgSxmbEeGJCffoNHA_Wg" name="Copy_Of_ログインする"/>
+    <ownedOperation xmi:id="_wPXgTBmbEeGJCffoNHA_Wg" name="Copy_Of_ログアウトする"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wPXgTRmbEeGJCffoNHA_Wg" name="グループ" clientDependency="_wPXgeRmbEeGJCffoNHA_Wg">
+    <ownedAttribute xmi:id="_wPXgThmbEeGJCffoNHA_Wg" name="Copy_Of_グループ名"/>
+    <ownedOperation xmi:id="_wPXgTxmbEeGJCffoNHA_Wg" name="Copy_Of_グループを作る"/>
+    <ownedOperation xmi:id="_wPXgUBmbEeGJCffoNHA_Wg" name="Copy_Of_グループを削除する"/>
+    <ownedOperation xmi:id="_wPXgURmbEeGJCffoNHA_Wg" name="Copy_Of_"/>
+    <ownedOperation xmi:id="_wPXgUhmbEeGJCffoNHA_Wg" name="Copy_Of_グループを削除する"/>
+    <ownedOperation xmi:id="_wPXgUxmbEeGJCffoNHA_Wg" name="Copy_Of_グループを検索する"/>
+    <ownedOperation xmi:id="_wPXgVBmbEeGJCffoNHA_Wg" name="Copy_Of_グループを検索する"/>
+    <ownedOperation xmi:id="_wPXgVRmbEeGJCffoNHA_Wg" name="Copy_Of_グループを作る"/>
+    <ownedOperation xmi:id="_wPXgVhmbEeGJCffoNHA_Wg" name="Copy_Of_グループを削除する"/>
+    <ownedOperation xmi:id="_wPXgVxmbEeGJCffoNHA_Wg" name="Copy_Of_グループを検索する"/>
+    <ownedOperation xmi:id="_wPXgWBmbEeGJCffoNHA_Wg" name="Copy_Of_グループを作る"/>
+    <ownedOperation xmi:id="_wPXgWRmbEeGJCffoNHA_Wg" name="Copy_Of_グループを削除する"/>
+    <ownedOperation xmi:id="_wPXgWhmbEeGJCffoNHA_Wg" name="Copy_Of_グループを検索する"/>
+    <ownedOperation xmi:id="_wPXgWxmbEeGJCffoNHA_Wg" name="Copy_Of_グループに加わる"/>
+    <ownedOperation xmi:id="_wPXgXBmbEeGJCffoNHA_Wg" name="Copy_Of_グループから抜ける"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_wPXgXRmbEeGJCffoNHA_Wg" name="" supplier="_wPXgXhmbEeGJCffoNHA_Wg" client="_wPXgNxmbEeGJCffoNHA_Wg"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wPXgXhmbEeGJCffoNHA_Wg" name="Followee"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wPXgXxmbEeGJCffoNHA_Wg" name="" memberEnd="_wPXgYBmbEeGJCffoNHA_Wg _wPXgYxmbEeGJCffoNHA_Wg">
+    <ownedEnd xmi:id="_wPXgYBmbEeGJCffoNHA_Wg" name="" type="_wPXgexmbEeGJCffoNHA_Wg" association="_wPXgXxmbEeGJCffoNHA_Wg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wPXgYRmbEeGJCffoNHA_Wg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wPXgYhmbEeGJCffoNHA_Wg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_wPXgYxmbEeGJCffoNHA_Wg" name="" type="_wPXgNxmbEeGJCffoNHA_Wg" association="_wPXgXxmbEeGJCffoNHA_Wg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wPXgZBmbEeGJCffoNHA_Wg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wPXgZRmbEeGJCffoNHA_Wg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wPXgZhmbEeGJCffoNHA_Wg" name="コメント">
+    <ownedAttribute xmi:id="_wPXgZxmbEeGJCffoNHA_Wg" name="Copy_Of_id"/>
+    <ownedAttribute xmi:id="_wPXgaBmbEeGJCffoNHA_Wg" name="Copy_Of_OpenID"/>
+    <ownedAttribute xmi:id="_wPXgaRmbEeGJCffoNHA_Wg" name="Copy_Of_グループ名"/>
+    <ownedAttribute xmi:id="_wPXgahmbEeGJCffoNHA_Wg" name="Copy_Of_レコード生成日時"/>
+    <ownedAttribute xmi:id="_wPXgaxmbEeGJCffoNHA_Wg" name="Copy_Of_レコード更新日時"/>
+    <ownedAttribute xmi:id="_wPXgbBmbEeGJCffoNHA_Wg" name="Copy_Of_コメント"/>
+    <ownedAttribute xmi:id="_wPXgbRmbEeGJCffoNHA_Wg" name="Copy_Of_コメント"/>
+    <ownedAttribute xmi:id="_wPXgbhmbEeGJCffoNHA_Wg" name="Copy_Of_OpenID"/>
+    <ownedAttribute xmi:id="_wPXgbxmbEeGJCffoNHA_Wg" name="Copy_Of_グループ名"/>
+    <ownedAttribute xmi:id="_wPXgcBmbEeGJCffoNHA_Wg" name="Copy_Of_コメントを書いた日時"/>
+    <ownedOperation xmi:id="_wPXgcRmbEeGJCffoNHA_Wg" name="Copy_Of_コメントを書く"/>
+    <ownedOperation xmi:id="_wPXgchmbEeGJCffoNHA_Wg" name="Copy_Of_ユーザを指定してコメントを見る"/>
+    <ownedOperation xmi:id="_wPXgcxmbEeGJCffoNHA_Wg" name="Copy_Of_グループを指定してコメントを見る"/>
+    <ownedOperation xmi:id="_wPXgdBmbEeGJCffoNHA_Wg" name="Copy_Of_followeeのコメントを見る"/>
+    <ownedOperation xmi:id="_wPXgdRmbEeGJCffoNHA_Wg" name="Copy_Of_コメントを書く"/>
+    <ownedOperation xmi:id="_wPXgdhmbEeGJCffoNHA_Wg" name="Copy_Of_ユーザを指定してコメントを見る"/>
+    <ownedOperation xmi:id="_wPXgdxmbEeGJCffoNHA_Wg" name="Copy_Of_グループを指定してコメントを見る"/>
+    <ownedOperation xmi:id="_wPXgeBmbEeGJCffoNHA_Wg" name="Copy_Of_Followeeのコメントを見る"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_wPXgeRmbEeGJCffoNHA_Wg" name="" supplier="_wPXgXhmbEeGJCffoNHA_Wg" client="_wPXgTRmbEeGJCffoNHA_Wg"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wPXgexmbEeGJCffoNHA_Wg" name="最大表示数">
+    <ownedAttribute xmi:id="_wPXgfBmbEeGJCffoNHA_Wg" name="Copy_Of_表示数"/>
+    <ownedAttribute xmi:id="_wPXgfRmbEeGJCffoNHA_Wg" name="Copy_Of_max"/>
+    <ownedOperation xmi:id="_wPXgfhmbEeGJCffoNHA_Wg" name="Copy_Of_最大表示数を設定する"/>
+    <ownedOperation xmi:id="_wPXgfxmbEeGJCffoNHA_Wg" name="Copy_Of_最大表示数を設定する"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wPXggBmbEeGJCffoNHA_Wg" name="" memberEnd="_wPXggRmbEeGJCffoNHA_Wg _wPXghBmbEeGJCffoNHA_Wg">
+    <ownedEnd xmi:id="_wPXggRmbEeGJCffoNHA_Wg" name="followする側" type="_wPXghxmbEeGJCffoNHA_Wg" association="_wPXggBmbEeGJCffoNHA_Wg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wPXgghmbEeGJCffoNHA_Wg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wPXggxmbEeGJCffoNHA_Wg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_wPXghBmbEeGJCffoNHA_Wg" name="followされる側" type="_wPXgXhmbEeGJCffoNHA_Wg" association="_wPXggBmbEeGJCffoNHA_Wg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wPXghRmbEeGJCffoNHA_Wg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wPXghhmbEeGJCffoNHA_Wg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wPXghxmbEeGJCffoNHA_Wg" name="Follower">
+    <ownedOperation xmi:id="_wPXgiBmbEeGJCffoNHA_Wg" name="Copy_Of_followする"/>
+    <ownedOperation xmi:id="_wPXgiRmbEeGJCffoNHA_Wg" name="Copy_Of_followをやめる"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_wPXgihmbEeGJCffoNHA_Wg" name="" supplier="_wPXghxmbEeGJCffoNHA_Wg" client="_wPXgNxmbEeGJCffoNHA_Wg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wPXgixmbEeGJCffoNHA_Wg" name="" memberEnd="_wPXgjBmbEeGJCffoNHA_Wg _wPXgjxmbEeGJCffoNHA_Wg">
+    <ownedEnd xmi:id="_wPXgjBmbEeGJCffoNHA_Wg" name="" type="_wPXgZhmbEeGJCffoNHA_Wg" association="_wPXgixmbEeGJCffoNHA_Wg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wPXgjRmbEeGJCffoNHA_Wg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wPXgjhmbEeGJCffoNHA_Wg"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_wPXgjxmbEeGJCffoNHA_Wg" name="" type="_wPXgNxmbEeGJCffoNHA_Wg" association="_wPXgixmbEeGJCffoNHA_Wg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wPXgkBmbEeGJCffoNHA_Wg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wPXgkRmbEeGJCffoNHA_Wg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
 </uml:Model>
